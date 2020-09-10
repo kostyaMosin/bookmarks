@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static "css/base.css" %}" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div id="header_inner">
+        <a id="logo" href="">Bookmarks</a>
+        {% if request.user.is_authenticated %}
+            <div id="menu">
+                <a href="{% url 'dashboard' %}" {% if section == 'dashboard' %}class="selected"{% endif %}>
+                    My dashboard
+                </a>
+                <a href="" {% if section == 'images' %}class="selected"{% endif %}>
+                    Images
+                </a>
+                <a href="" {% if section == 'people' %}class="selected"{% endif %}>
+                    People
+                </a>
+                <span class="menu-user">
+            Hello {{ request.user.first_name }},
+            <a href="{% url 'logout' %}">Logout</a>
+                </span>
+            </div>
+        {% else %}
+            <div id="menu">
+                <a class="menu-user" href="{% url 'login' %}">Log-in</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<div id="message-tab">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="message {{ message.tags }}">
+                <span><a class="close" href="#">✖</a></span>
+                {{ message|safe }}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<div id="content">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

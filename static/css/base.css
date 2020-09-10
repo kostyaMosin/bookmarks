@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+}
+
+body,
+html {
+    height: 100%;
+    min-width: 320px;
+}
+
+#content {
+    padding-left: 50px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+#content p {
+    margin-top: 20px;
+}
+
+#content a {
+    color: lightseagreen;
+}
+
+#header {
+    height: 60px;
+    background: lightseagreen;
+    box-shadow: 0 0 60px rgba(0, 0, 0, .12);
+}
+
+#header_inner {
+    max-width: 1788px;
+    position: relative;
+    margin: auto;
+    padding: 10px 20px 8px
+}
+
+#menu {
+    z-index: 90;
+    position: relative;
+    top: 10px;
+    margin-left: 200px
+}
+
+#menu a {
+    color: aliceblue;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-weight: lighter;
+    padding: 0 15px 19px;
+}
+
+#menu a.selected {
+    color: black;
+    font-weight: normal;
+}
+
+#logo {
+    top: 7px;
+    width: 100px;
+    height: 24px;
+    position: relative;
+    float: left;
+    text-decoration: none;
+    margin-right: 40px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    color: aliceblue;
+}
+
+#sign_in_out input {
+    padding: 12px 10px 11px !important;
+    width: 100%;
+    max-width: none !important;
+}
+
+#message-tab {
+    height: 40px;
+    padding: 20px;
+}
+
+.button-green {
+    color: #fff !important;
+    background-color: lightseagreen !important;
+}
+
+.message {
+    padding: 15px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.message.success {
+    background-color: deepskyblue;
+}
+
+.message.error {
+    background-color: #ff4b5c;
+}
+
+.close {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.close:hover {
+    color: black;
+}
+
+.menu-user {
+    float: right;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-weight: normal;
+}
+
+.window {
+    background: #fff;
+    margin: 5% auto 0;
+    max-width: 640px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 30, .5);
+}
+
+.tab_menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #f0f1f4;
+    border-left: 0;
+    border-right: 0;
+    text-align: center;
+}
+
+.pure-form input[type=text],
+.pure-form input[type=password],
+.pure-form input[type=submit],
+.pure-form input[type=email],
+.pure-form button {
+    padding: .5em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.pure-button {
+    padding: 10px 22px !important;
+    text-decoration: none !important;
+    border-radius: 10px !important;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    padding: 0 0 10px;
+    font-size: 50px;
+    border: 0 solid #f0f1f4;
+    border-bottom-width: 3px;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Log-in{% endblock %}
+{% block content %}
+    <div id="sign_in_out" style="padding: 10px">
+        <div class="window" style="max-width: 400px">
+            <div style="padding: 20px 25px">
+                <div class="tab_menu" style="border-top: 0; margin: 0 0 10px; font-size: 20px;">
+                    <a>Log-in</a>
+                </div>
+                <form id="login_form" class="pure-form" action="." method="post">
+                    <p>
+                        <input id="id_username" type="text" name="username" placeholder="Username" maxlength="100"
+                               required="">
+                    </p>
+                    <div>
+                        <p><input id="id_password" type="password" name="password" placeholder="Password" required=""></p>
+                    </div>
+                    {% csrf_token %}
+                    <p><input class="pure-button button-green" style="text-align: center" type="submit" value="Log-in"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
